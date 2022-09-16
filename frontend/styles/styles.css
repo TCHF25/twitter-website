@@ -1,3 +1,111 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities */
+
+.container{
+    display: flex;
+}
+
+/* Log in Page */
+
+.sideImage > img{
+    width: 50vw;
+    height: 100vh;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.logInContent{
+    display: grid;
+    row-gap: 20px;
+    padding: 20px 30px;
+    grid-template-rows: 15% 10% auto;
+}
+
+.logInContent > h1{
+    font-size: 50px;
+    align-self: end;
+    margin: 0;
+}
+
+.logInContent > h3{
+    font-size: 30px;
+    align-self: start;
+    margin: 0;
+}
+
+.logInContent > .logInBox{
+    align-self: start;
+}
+
 .logInBox{
-    background-image: url("/frontend/assets/background.jpg");
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 25% auto;
+}
+
+.logInBox > p{
+    font-size: 30px;
+}
+
+.logInBox > input{
+    width: 60%;
+    height: 40px;
+    border-radius: 25px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.logInBox > input::placeholder{
+    font-size: 25px;
+}
+
+.logInBox > button{
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 25px;
+    border: 0;
+    color: white;
+    background-color: rgb(30, 173, 255);
+}
+
+.logInBox > button:hover{
+    cursor: pointer;
+}
+
+.logInBox > div{
+    display: flex;
+    flex-direction: row;
+}
+
+.logInBox > div > p{
+    margin-right: 5px;
+    align-self: center;
+}
+
+.logInBox > div > a{
+    align-self: center;
+    color: rgb(30, 173, 255);
+}
+
+.c{
+    background-color: lawngreen;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
