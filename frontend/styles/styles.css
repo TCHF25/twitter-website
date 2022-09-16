@@ -95,17 +95,9 @@ a{
     align-self: center;
 }
 
-.logInBox > div > a{
+.logInBox > div > button{
     align-self: center;
     color: rgb(30, 173, 255);
-}
-
-.c{
-    background-color: lawngreen;
-    z-index: 10;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: white;
+    border: 0;
 }
