@@ -5,8 +5,7 @@ window.onload = () => {
     const backFromPopup = document.getElementById("backFromPopup")
     const create = document.getElementById("signupBtn")
     
-    console.log(signUpPopup)
-
+    // Sign up Popup open
     signUpBtn.addEventListener("click",() => {
         signUpPopup.style.display = "flex" 
         
@@ -16,12 +15,17 @@ window.onload = () => {
                 signUpPopup.style.display = "none" 
             })
         }
-
-
     })
 
+    // Sign up Popun close
     create.addEventListener("click", () => {
         console.log("hi")
     })
         
+
+    // Log in check
+    
+
+
+
     }
