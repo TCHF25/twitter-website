@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter Login</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="javascript/script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="sideImage">
-            <img src="./assets/twitter logo 2.jpg" alt="">
+            
         </div>
         <div class="logInContent">
             <h1>What Is Happening</h1>
@@ -25,21 +26,21 @@
 
                 <div>
                     <p>Don't have an account?</p>
-                    <button>Sign up</button>
+                    <button  id="signUpBtn" >Sign up</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="signUpPopup">
+    <div id="signUpPopup" class="signUpPopup">
         <div>
-            <button><img src="./assets/x.webp"></button>
+            <button id="backFromPopup"><img src="./assets/x.webp"></button>
             <h3>Sign Up to Twitter</h3>
             <input type="text" placeholder="Full Name">
             <input type="text" placeholder="Email">
             <input type="text" placeholder="Phone Number">
             <input type="text" placeholder="Password">
             <input type="text" placeholder="Repeat Password">
-            <button class="signUpBtn">Sign Up</button>
+            <button id="signupBtn" class="signUpBtn">Sign Up</button>
         </div>
     </div>
 </body>

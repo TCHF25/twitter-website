@@ -11,19 +11,22 @@ a{
 
 .container{
     display: flex;
+    flex-direction: column;
 }
 
 /* Log in Page */
 
-.sideImage > img{
-    width: 50vw;
-    height: 100vh;
-    background-position: center;
-    object-fit: cover;
+.sideImage {
+    width: 100vw;
+    height: 40vw;
+    background-image: url("/frontend/assets/background.jpg");
+    background-position:left;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .logInContent{
+    padding: 20px 0;
     display: grid;
     row-gap: 20px;
     padding: 20px 30px;
@@ -31,14 +34,15 @@ a{
 }
 
 .logInContent > h1{
-    font-size: 50px;
+    font-size: 40px;
     align-self: end;
     margin: 0;
+    display: none;
 }
 
 .logInContent > h3{
-    font-size: 30px;
-    align-self: start;
+    font-size: 10vw;
+    align-self: end;
     margin: 0;
 }
 
@@ -53,29 +57,30 @@ a{
 }
 
 .logInBox > p{
-    font-size: 30px;
+    font-size: 7vw;
 }
 
 .logInBox > input{
     width: 60%;
-    height: 40px;
+    height: 6vw;
+    font-size: 4vw ;
     border-radius: 25px;
     border-color: gray;
     border-style: solid;
     border-width: 2px;
-    font-size: 25px;
     padding-left: 10px;
+    align-items: center;
 }
 
 .logInBox > input::placeholder{
-    font-size: 25px;
+    font-size: 4vw ;
 }
 
 .logInBox > button{
     width: 20%;
-    height: 40px;
+    height: 7vw;
     border-radius: 25px;
-    font-size: 25px;
+    font-size: 5vw;
     border: 0;
     color: white;
     background-color: rgb(30, 173, 255);
@@ -100,13 +105,13 @@ a{
     color: rgb(30, 173, 255);
     background-color: white;
     border: 0;
+    width: 12vh;
 }
 
 .signUpPopup{
-    display: flex;
     background-color: rgba(0,0,0,70%);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -118,17 +123,21 @@ a{
 .signUpPopup > div{
     display: grid;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     row-gap: 15px;
     grid-template-rows: 5% auto;
-    width: 65vh;
-    height: 80vh;
+    width: 40vw;
+    height: 75vw;
     background-color:white;
 }
 
 .signUpPopup > div > button{
-    width: 30px;
-    height: 30px;
+    width: 5vw;
+    height: 5vw;
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 20px;
+    min-height: 20px;
     align-self: flex-start;
     border-radius: 50%;
     font-size: 25px;
@@ -136,40 +145,126 @@ a{
     background-color:white;
 }
 
+.signUpPopup > div > button:hover{
+    background-color:rgb(140, 222, 255);
+    cursor: pointer;
+}
+
 .signUpPopup > div > button > img{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-
 }
 
 .signUpPopup > div > h3{
-    font-size: 30px;
-    margin: 0;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 3vw;
 }
 
 .signUpPopup > div > input{
     width: 80%;
-    height: 40px;
+    height: 4vw;
     border-radius: 25px;
     border-color: gray;
     border-style: solid;
     border-width: 2px;
-    font-size: 25px;
+    font-size: 3vw;
     padding-left: 10px;
+    justify-self: center;
 }
 
 .signUpPopup > div > input::placeholder{
-    font-size: 25px;
+    font-size: 3vw;
 }
 
 .signUpPopup > div > .signUpBtn{
-    width: 20%;
-    height: 40px;
+    height: 6vw;
+    width: 15vw;
+    max-width: none;
     border-radius: 25px;
-    font-size: 25px;
+    font-size: 3vw;
     border: 0;
     color: white;
     background-color: rgb(30, 173, 255);
+    justify-self: center;
+}
+
+@media only screen and (min-width: 900px){
+
+    .container{
+        flex-direction: row;
+    }
+
+    .sideImage{
+        background-image: url("/frontend/assets/twitter\ logo\ 2.jpg");
+        background-position: center;
+        width: 50vw;
+        height: 100vh;
+    }
+    
+    .logInContent > h1 {
+        font-size: 50px;
+        display: flex;
+    }
+
+    .logInContent > h3 {
+        align-self: start;
+        font-size: 30px;
+    }
+    
+    .logInBox > p{
+        font-size: 30px;
+    }
+    
+    .logInBox > input{
+        height: 40px;
+        font-size: 25px;
+    }
+    
+    .logInBox > input::placeholder{
+        font-size: 25px;
+    }
+    
+    .logInBox > button{
+        height: 40px;
+        font-size: 25px;
+    }
+    
+    .logInBox > div > button{
+        width: 12vh;
+    }
+    
+
+    .signUpPopup > div{
+        width: 35vw;
+        max-width: 350px;
+        height: 80vh;
+    }
+    
+    .signUpPopup > div > button{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .signUpPopup > div > h3{
+        font-size: 30px;
+        margin: 0;
+    }
+    
+    .signUpPopup > div > input{
+        height: 40px;
+        font-size: 25px;
+    }
+    
+    .signUpPopup > div > input::placeholder{
+        font-size: 25px;
+    }
+    
+    .signUpPopup > div > .signUpBtn{
+        width: 40%;
+        height: 40px;
+        font-size: 25px;
+    }
 }
