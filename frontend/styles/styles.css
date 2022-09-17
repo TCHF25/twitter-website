@@ -29,7 +29,7 @@ a{
 .sideImage {
     width: 100vw;
     height: 40vw;
-    background-image: url("/frontend/assets/background.jpg");
+    background-image: url("/assets/background.jpg");
     background-position:left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -212,7 +212,7 @@ a{
     }
 
     .sideImage{
-        background-image: url("/frontend/assets/twitter-svgrepo-com.svg");
+        background-image: url("frontend/assets/twitter-svgrepo-com.svg");
         background-position: center;
         width: 50vw;
         height: 100vh;
