@@ -17,8 +17,6 @@ window.onload = () => {
 
 
 
-
-
     // Sign up Popup open
     dontHaveAccountBtn.addEventListener("click",() => {
         signUpPopup.style.display = "flex" 
