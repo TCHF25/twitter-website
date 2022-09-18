@@ -7,11 +7,11 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 include("connection.php");
 
 $follower = $_POST["id-follower"];
-$following = $_POST["id-following"];
+$followed = $_POST["id-followed"];
 
-$query = $sqli->prepare("INSERT INTO users(id_follower,id_following) value(?,?,?,?,?)");
-$query->bind_param("sssss",$follower,$following);
+$query = $sqli->prepare("SELECT * FROM follows");
 $query->execute();
+$results = $query->get_result();
 
 
 $response=[
