@@ -3,246 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="images" href="images/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="javascript/script.js"></script>
 </head>
-
 <body>
-    <nav class="wrapper">
-    <!--left margin-->
-    <div class="sidebar">
-        <!--logo and search bar-->
-        <div class="logo-search-bar">
-            <div class="twitter-logo" >
-                <a href="index.html"> <img src="images/logo.png" alt="logo"> </a>
-            </div>
-            <div class="search-bar">
-                <div class="search-item">
-                    <img src="images/search.png" alt="search">
+    <div class="container">
+    <!-- Hero Image contanier -->
+        <div class="sideImage"></div>
+    <!-- Hero Image container -->
+
+    <!-- Start of Sign in Section -->
+
+        <!-- Headers -->
+        <div class="logInContent">
+            <h1>What Is Happening</h1>
+            <h3>Join Twitter!</h3>
+        <!-- End of Headers -->
+
+            <!-- User Inputs -->
+            <div class="logInBox">
+                <p>Sign in to Twitter:</p>
+                <input id="logInEmail" type="text" placeholder="Email">
+                <input id="logInPass" type="text" placeholder="Password">
+
+                <button id="logInBtn">Next</button>
+
+                <div>
+                    <p>Don't have an account?</p>
+                    <button  id="dontHaveAccount" >Sign up</button>
                 </div>
-                <div class="input-bar">      
-                    <input class="input-bar" type="text" placeholder="Search Twitter">
-                </div>
             </div>
+            <!-- End of User Inputs -->
         </div>
-        <ul class="home-profile">
-            <li class="home">
-                <a class="home" href="index.html">
-                <img src="images/home.png" alt="home">  <!--Change to clickable vector-->
-                <div class="side-btn" href="#home">Home</div>
-                </a>
-            </li>
-            <li class="profile">
-                <a  class="profile" href="profile.html">
-                <img src="images/profile.png" alt="profile">  <!--Change to clickable vector-->
-                <div class="side-btn">Profile</div>
-                </a>
-            </li>
-        </ul>
-        
+    <!-- End of Sign in Section -->
 
-        <!--who to follow section-->
-        <div class="who-to-follow-section">
-            <div class="who-to-follow-title">
-                <h3>Who to follow</h3>
-            </div>
-            <div class="name-to-follow">
-                <!--after database-->
-            </div>
-            <div class="showmore-btn">
-                <button class="showmore-btn">Show more</button>
-            </div>
+    <!-- Start of Sign up Popup Section -->
+    <div id="signUpPopup" class="signUpPopup">
+        <div>
+            <button id="backFromPopup"><img src="./assets/x.webp"></button>
+            <h3>Sign Up to Twitter</h3>
+            <input id="signUpName" type="text" placeholder="Full Name">
+            <input id="signUpEmail" type="text" placeholder="Email">
+            <input id="signUpPhone" type="text" placeholder="Phone Number">
+            <input id="signUpPass" type="text" placeholder="Password">
+            <input id="passConfirm" type="text" placeholder="Repeat Password">
+            <button id="signupBtn" class="signUpBtn">Sign Up</button>
         </div>
-
-        <!--footer-section-->
-        <footer class="footer">
-            <!--username with profile pic-->
-
-            <!--terms and services-->
-            <h6>Terms of Service Privacy Policy Cookie Policy<br>
-                Ads info More © 2022 Twitter, Inc.</h6>
-        </footer>
-    </nav>
-
-
-
-    <div class="main">
-        <div class="fixed-header">
-            <div>
-                <button class="home-btn">Home</button>
-            </div>
-            <div class="refresh-item">
-                <img src="images/refresh.png" alt="refresh">
-            </div>
-        </div>
-        <!--what's happening section-->
-        <div class="whats-happening-tweet-section">
-            <div>
-                <img class="user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="twitter-input">
-            <input class="tweet-input-element" placeholder="What's happening?">
-            </div>
-            <!--button to make a tweet-->
-            <div class="tweet-button">
-            <button class="tweet-btn">Tweet</button>
-            </div>
-        </div>
-        <!--All the followings tweets in order of last to first-->
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-                
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tweet">
-            <!--image and name and @username of the person who tweeted-->
-            <div class="image-div">
-                <img class="tweet-user-icon" src="images/jonsnow.jpeg" alt="icon">
-            </div>
-            <div class="tweet-name-likes">
-
-                <div class="name-username">
-                    <div class="name">Jon Snow</div>
-                    <div class="username">@jonsnow</div>
-                </div>
-
-                <div class="tweet-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</div>
-                
-                <div class="like-button">
-                    <img class="like-btn" src="images/like.png" alt="like">
-                </div>
-
-            </div>
-        </div>
-
     </div>
+    <!-- Start of Sign up Popup Section -->
+
 </div>
     
 </body>
