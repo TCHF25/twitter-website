@@ -33,7 +33,7 @@ window.onload = () => {
     profileBtn.addEventListener("click",() =>{
 
         homePage.style.display = "none"
-        tweetscontainer.style.display = "flex"
+        tweetscontainer.style.display = "none"
         profilePage.style.display = "flex"
     })
 

@@ -1,4 +1,4 @@
-/*body{
+body{
     margin: 0;
 }
 
@@ -15,7 +15,7 @@ body{
 a{
     text-decoration: none;
     color: inherit;
-}*/
+}
 
 /* Utilities */
 
@@ -292,6 +292,10 @@ a{
 }
 
 
+
+
+
+
 .wrapper {
     
     display: flex;
@@ -371,14 +375,13 @@ a{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    margin-top: 40px; 
-    list-style: none; 
+    margin-top: 40px;  
 
   }
 
-.home-sec  {
-    display: flex;
-    flex-direction: column;
+.home  {
+    display: none;
+    flex-direction: row;
     padding-bottom: 10px; 
     text-decoration: none;   
 }
@@ -386,7 +389,6 @@ a{
 .flexrow{
     flex-direction: row;
     justify-content: center;
-    text-decoration: none;  
 }
 
 .profile {
@@ -405,7 +407,6 @@ a{
     border-radius: 10px;
     font-size: 20px;
     padding-left: 1vh;
-    text-decoration: none;
 }
 
 .side-btn:hover {
