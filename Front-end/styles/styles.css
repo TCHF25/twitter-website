@@ -883,9 +883,53 @@ body {
     }
   }
 
+.editProfilePopup{
+    background-color: rgba(0,0,0,70%);
+    height:100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
+.editProfileContainer{
+    width: 75%;
+    height: 90%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
 
+.editProfileContainer > div{
+    width: 35%;
+    height: 25%;
+    margin: 30px 0 0 20px;
+    align-self: center;
+}
 
+.hidden{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
 
+.changePhoto{
+    align-self: center;
+    background-color: rgb(70, 179, 243);
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
 
+}
 
+.changePhoto:hover{
+    cursor: pointer;
+}
