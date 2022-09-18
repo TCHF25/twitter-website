@@ -69,6 +69,8 @@ window.onload = () => {
                         })
                         .then(response => response.json())
                         .then(data => console.log("success"))
+
+                        window.location.href = "index.html"
                     }
 
                 })
@@ -114,6 +116,7 @@ window.onload = () => {
                 console.log("wrong password")
             } else if(correctEmail == 2){
                 console.log("successful log in")
+                window.location.href = "index.html"
             } else if(correctEmail == 0){
                 console.log("not a valid email, sign in!")
             }

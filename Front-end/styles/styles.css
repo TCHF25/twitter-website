@@ -212,7 +212,7 @@ a{
     }
 
     .sideImage{
-        background-image: url("frontend/assets/twitter-svgrepo-com.svg");
+        background-image: url("assets/twitter-svgrepo-com.svg");
         background-position: center;
         width: 50vw;
         height: 100vh;
@@ -378,18 +378,23 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    margin-top: 40px;  
+    margin-top: 40px; 
+    list-style: none; 
 
   }
 
-.home  {
+.home-sec  {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-bottom: 10px; 
     text-decoration: none;   
 }
 
-
+.flexrow{
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;  
+}
 
 .profile {
     display: flex;
@@ -399,13 +404,20 @@ body {
 }
 
 .side-btn {
+    height: 30px;
     border: 0cm;
     color: black;
     font-weight: bold;
-    background-color: white;
+    background-color: whitesmoke;
+    border-radius: 10px;
     font-size: 20px;
     padding-left: 1vh;
+    text-decoration: none;
+}
 
+.side-btn:hover {
+    cursor: pointer;
+    background-color: rgb(216, 212, 212);
 }
 
 .blue-btn {
@@ -481,6 +493,10 @@ body {
     padding-top: 3vh;
 }
 
+.tweetContainer{
+    display: none;
+    flex-direction: column;
+}
 
 .refresh-item {
     color: black;
