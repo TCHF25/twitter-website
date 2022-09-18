@@ -39,7 +39,7 @@ window.onload = () => {
                 let passC = passConfirm.value
 
                 // make sure entered email is unique
-                fetch("http://localhost/twitter-website/backend/apis/APIs/log-in.php",{
+                fetch("http://localhost/twitter-website/backend/log-in.php",{
                 method:"POST",
                 body: new URLSearchParams({"password":0})
                 })
@@ -63,7 +63,7 @@ window.onload = () => {
                         console.log("check password confirmation")
                     } else{
                         // register account
-                        fetch("http://localhost/twitter-website/backend/apis/APIs/Sign-up.php",{
+                        fetch("http://localhost/twitter-website/backend/Sign-up.php",{
                         method:"POST",
                         body: new URLSearchParams({"full_name":name,"email":email,"phone_number":phone,"password":pass})
                         })
@@ -89,7 +89,7 @@ window.onload = () => {
             console.log("Please enter all fields")
         } else{
             // check for email in database + hash entered email
-        fetch("http://localhost/twitter-website/backend/apis/APIs/log-in.php",{
+        fetch("http://localhost/twitter-website/backend/log-in.php",{
             method:"POST",
             body: new URLSearchParams({"password":pass})
         })
@@ -107,10 +107,20 @@ window.onload = () => {
 
                     if(hashedpass == accounts[i].password){
                         correctEmail = 2
+                        localStorage.setItem("id",accounts[i].id)
+                        localStorage.setItem("full_name",accounts[i].full_name)
+                        localStorage.setItem("email",accounts[i].email)
+                        localStorage.setItem("date_joined",accounts[i].date_joined)
+                        localStorage.setItem("password",accounts[i].password)
+                        localStorage.setItem("phone_number",accounts[i].phone_number)
+
+                        console.log(localStorage)
                     }
                     break
                 }
             }
+
+            
 
             if(correctEmail == 1){
                 console.log("wrong password")

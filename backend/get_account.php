@@ -6,11 +6,19 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 
 include("connection.php");
 
-$unhashedpassword = $_POST["unhashedpassword"];
 
-if($unhashedpassword != null){
-$hashedpassword = hash("sha256",$unhashedpassword);
+$id = $_POST["id"];
 
-echo json_encode($hashedpassword);
+
+$query = $sqli->prepare("SELECT * FROM accounts WHERE user_id = $id");
+$query->execute();
+$results = $query->get_result();
+
+$response=[];
+
+while($a=$results->fetch_assoc()){
+    $response[]=$a;
 }
+
+echo json_encode($response);
 ?>

@@ -29,7 +29,7 @@ a{
 .sideImage {
     width: 100vw;
     height: 40vw;
-    background-image: url("/assets/background.jpg");
+    background-image: url("../assets/background.jpg");
     background-position:left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -212,7 +212,7 @@ a{
     }
 
     .sideImage{
-        background-image: url("assets/twitter-svgrepo-com.svg");
+        background-image: url("../assets/twitter-svgrepo-com.svg");
         background-position: center;
         width: 50vw;
         height: 100vh;
@@ -284,20 +284,6 @@ a{
     }
 }
 
-
-
-
-
-
-
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 15vh;
-    justify-content: center;
-    
-    
-}
 
 .wrapper {
     
@@ -634,13 +620,13 @@ body {
 }
 
 .profile-pic {
+    height: 18vh;
     width: 18vh;
     border-radius: 100px;
     border-style: solid;
     border-color: white;
-    margin-left: 5vh;
-    margin-top: -5vh;
-
+    align-self: center;
+    background-color: rgb(173, 173, 173);
 }
 
 .edit-button-div {
@@ -695,9 +681,7 @@ body {
 
 @media only screen and (max-width: 1400px) {
 
-    body {
-        margin-left: 35vh;
-    }
+
      
   }
 
@@ -754,10 +738,7 @@ body {
 
 
   @media only screen and (max-width: 790px) {
-    body {
-        margin-left: 0vh;
-        font-size: 15px;
-    }
+
 
     .main {
         width: 100%;
@@ -772,10 +753,7 @@ body {
 
 
   @media only screen and (max-width: 650px) {
-    body {
-        margin-left: 0vh;
-        font-size: 15px;
-    }
+
     .main {
         width: 80%;
     }
@@ -805,10 +783,7 @@ body {
 
 
   @media only screen and (max-width: 550px) {
-    body {
-        margin-left: 0vh;
-        font-size: 14px;
-    }
+
 
     .main {
         width: 80%;
@@ -834,10 +809,7 @@ body {
 
 
   @media only screen and (max-width: 430px) {
-    body {
-        margin-left: 0vh;
-        font-size: 13px;
-    }
+
 
     .main {
         width: 80%;
@@ -862,10 +834,7 @@ body {
 
 
   @media only screen and (max-width: 350px) {
-    body {
-        margin-left: 0vh;
-        font-size: 12px;
-    }
+
 
     .main {
         width: 80%;
@@ -888,9 +857,53 @@ body {
     }
   }
 
+.editProfilePopup{
+    background-color: rgba(0,0,0,70%);
+    height:100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
+.editProfileContainer{
+    width: 75%;
+    height: 90%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
 
+.editProfileContainer > div{
+    width: 35%;
+    height: 25%;
+    margin: 30px 0 0 20px;
+    align-self: center;
+}
 
+.inputfile{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
 
+.changePhoto{
+    align-self: center;
+    background-color: rgb(70, 179, 243);
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
 
+}
 
+.changePhoto:hover{
+    cursor: pointer;
+}
