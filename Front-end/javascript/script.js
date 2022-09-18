@@ -105,10 +105,20 @@ window.onload = () => {
 
                     if(hashedpass == accounts[i].password){
                         correctEmail = 2
+                        localStorage.setItem("id",accounts[i].id)
+                        localStorage.setItem("full_name",accounts[i].full_name)
+                        localStorage.setItem("email",accounts[i].email)
+                        localStorage.setItem("date_joined",accounts[i].date_joined)
+                        localStorage.setItem("password",accounts[i].password)
+                        localStorage.setItem("phone_number",accounts[i].phone_number)
+
+                        console.log(localStorage)
                     }
                     break
                 }
             }
+
+            
 
             if(correctEmail == 1){
                 console.log("wrong password")

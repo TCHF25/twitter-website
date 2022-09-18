@@ -621,13 +621,13 @@ a{
 }
 
 .profile-pic {
+    height: 18vh;
     width: 18vh;
     border-radius: 100px;
     border-style: solid;
     border-color: white;
-    margin-left: 5vh;
-    margin-top: -5vh;
-
+    align-self: center;
+    background-color: rgb(173, 173, 173);
 }
 
 .edit-button-div {

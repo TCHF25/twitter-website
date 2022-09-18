@@ -1,5 +1,14 @@
 window.onload = () => {
 
+    console.log(localStorage)
+    fetch("http://localhost/twitter-website/backend/get_account.php",{
+        method:"POST",
+        body: new URLSearchParams({"id":localStorage.getItem("id")})
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+
+
     const homeBtn = document.getElementById("homeBtn")
     const homePage = document.getElementById("home")
     const profileBtn = document.getElementById("profileBtn")
@@ -15,7 +24,6 @@ window.onload = () => {
         homePage.style.display = "flex"
         tweetscontainer.style.display = "flex"
         profilePage.style.display = "none"
-        editProfilePopup.style.display = "none"
     })
 
     profileBtn.addEventListener("click",() =>{
@@ -23,13 +31,8 @@ window.onload = () => {
         homePage.style.display = "none"
         tweetscontainer.style.display = "none"
         profilePage.style.display = "flex"
-        editProfilePopup.style.display = "none"
     })
 
-    editProfileBtn.addEventListener("click", () =>{
-        editProfilePopup.style.display = "flex"
-
-    })
 
     changePhoto.addEventListener("change", e =>{
         const reader = new FileReader()
@@ -38,14 +41,14 @@ window.onload = () => {
         reader.addEventListener("load", () => {
             let image = reader.result
             let username = "taha"
-            fetch("http://localhost/twitter-website/backend/account.php",{
+            fetch("http://localhost/twitter-website/backend/photo.php",{
                 method:"POST",
-                body: new URLSearchParams({"base64String":image,"username":username})
+                body: new URLSearchParams({"base64String":image,"username":localStorage.getItem("email")})
             })
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                let imgURL = `../backend/profile-photos/${username}.png`
+                let imgURL = `../backend/profile-photos/${localStorage.getItem("email")}.png`
                 console.log(imgURL)
                 profilePhoto.innerHTML = `<img src="${imgURL}" class="profile-pic"/>`
             })
