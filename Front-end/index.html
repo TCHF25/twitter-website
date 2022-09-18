@@ -9,6 +9,114 @@
     <script src="javascript/script.js"></script>
 </head>
 <body>
+    <nav class="wrapper">
+    <!--left margin-->
+    <div class="sidebar">
+        <!--logo and search bar-->
+        <div class="logo-search-bar">
+            <div class="twitter-logo" >
+                <a href="index.html"> <img src="assets/logo.png" alt="logo"> </a>
+            </div>
+            <div class="search-bar">
+                <div class="search-item">
+                    <img src="assets/search.png" alt="search">
+                </div>
+                <div class="input-bar">      
+                    <input class="input-bar" type="text" placeholder="Search Twitter">
+                </div>
+            </div>
+        </div>
+        <ul class="home-profile">
+            <li class="flexrow">
+                <div class="flexrow">
+                <img src="assets/home.png" alt="home">  <!--Change to clickable vector-->
+                <button id="homeBtn" class="side-btn">Home</button>
+                </div>
+            </li>
+            <li class="profile">
+                <div  class="profile">
+                <img src="assets/profile.png" alt="profile">  <!--Change to clickable vector-->
+                <button id="profileBtn" class="side-btn">Profile</button>
+                </div>
+            </li>
+        </ul>
+        
+
+        <!--who to follow section-->
+        <div class="who-to-follow-section">
+            <div class="who-to-follow-title">
+                <h3>Who to follow</h3>
+            </div>
+            <div class="name-to-follow">
+                <!--after database-->
+            </div>
+            <div class="showmore-btn">
+                <button class="showmore-btn">Show more</button>
+            </div>
+        </div>
+
+        <!--footer-section-->
+        <footer class="footer">
+            <!--username with profile pic-->
+
+            <!--terms and services-->
+            <h6>Terms of Service Privacy Policy Cookie Policy<br>
+                Ads info More © 2022 Twitter, Inc.</h6>
+        </footer>
+    </nav>
+
+    <div class="main">
+        <container class="home-sec" id="home">
+            
+                 <div class="fixed-header">
+                        <div>
+                            <button class="home-btn">Home</button>
+                        </div>
+                        <div class="refresh-item">
+                             <img src="assets/refresh.png" alt="refresh">
+                        </div>
+                </div>
+                        <!--what's happening section-->
+                <div class="whats-happening-tweet-section">
+                        <div>
+                            <img class="user-icon" src="assets/jonsnow.jpeg" alt="icon">
+                        </div>
+                        <div class="twitter-input">
+                            <input class="tweet-input-element" placeholder="What's happening?">
+                        </div>
+                        <!--button to make a tweet-->
+                        <div class="tweet-button">
+                            <button class="tweet-btn">Tweet</button>
+                        </div>
+                </div>
+         </container>
+        
+
+        <container class="profile" id="profile">
+            <div class="profile-section">
+                <div class="profile-cover">
+                    <img class="cover" src="assets/cover.jpg" alt="cover">
+                </div>
+                <div id="pp" class="profile-pic">
+                </div>
+                <div class="edit-button-div">
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file" class="changePhoto">Choose Picture</label>
+                </div>
+                <div class="name--username">
+                    <div class="name">Jon Snow</div>
+                    <div class="username">@username</div>
+                </div>
+                <div class="interactions">
+                    <div class="following">Following</div>
+                    <div class="followers">Followers</div>
+                </div>
+                <div class="tweets-btn">Tweets</div>
+            </div>
+        </container>
+
+
+
     <div class="container">
     <!-- Hero Image contanier -->
         <div class="sideImage"></div>
