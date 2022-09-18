@@ -7,7 +7,8 @@ window.onload = () => {
     const logInBtn = document.getElementById("logInBtn")
     const logInEmail = document.getElementById("logInEmail")
     const logInPass = document.getElementById("logInPass")
-
+    const logInInteractionBox = document.getElementById("logInInteractionBox")
+    const signUpInteractionBox = document.getElementById("signUpInteractionBox")
     const signUpName = document.getElementById("signUpName")
     const signUpEmail = document.getElementById("signUpEmail")
     const signUpPhone = document.getElementById("signUpPhone")
@@ -24,7 +25,6 @@ window.onload = () => {
         
         // When Popup is opened add back button option / signUp option
         if(signUpPopup.style.display == "flex"){
-            console.log("hi")
             backFromPopup.addEventListener("click",() => {
                 signUpPopup.style.display = "none" 
             })
@@ -56,23 +56,25 @@ window.onload = () => {
                             break
                         }
                     }
+                    if(name == "" ||email == "" ||phone == "" ||pass == "" ||passC == ""){
+                        signUpInteractionBox.innerHTML = "<p>Please enter all fields</p>"
+                    }else{
+                        if(valid == 0){
+                            signUpInteractionBox.innerHTML = "<p>Not valid email</p>"
+                        } else if(pass != passC){
+                            signUpInteractionBox.innerHTML = "<p>Check password confirmation</p>"
+                        } else{
+                            // register account
+                            fetch("http://localhost/twitter-website/backend/Sign-up.php",{
+                            method:"POST",
+                            body: new URLSearchParams({"full_name":name,"email":email,"phone_number":phone,"password":pass})
+                            })
+                            .then(response => response.json())
+                            .then(data => console.log("Success"))
 
-                    if(valid == 0){
-                        console.log("not valid email")
-                    } else if(pass != passC){
-                        console.log("check password confirmation")
-                    } else{
-                        // register account
-                        fetch("http://localhost/twitter-website/backend/Sign-up.php",{
-                        method:"POST",
-                        body: new URLSearchParams({"full_name":name,"email":email,"phone_number":phone,"password":pass})
-                        })
-                        .then(response => response.json())
-                        .then(data => console.log("success"))
-
-                        window.location.href = "index.html"
+                            window.location.href = "main.html"
+                        }
                     }
-
                 })
             })
         }
@@ -86,7 +88,7 @@ window.onload = () => {
         let correctEmail = 0
 
         if(email == "" || pass == ""){
-            console.log("Please enter all fields")
+            logInInteractionBox.innerHTML = "<p>Please enter all fields</p>"
         } else{
             // check for email in database + hash entered email
         fetch("http://localhost/twitter-website/backend/log-in.php",{
@@ -123,17 +125,18 @@ window.onload = () => {
             
 
             if(correctEmail == 1){
-                console.log("wrong password")
+                logInInteractionBox.innerHTML = "<p>Wrong Password</p>"
             } else if(correctEmail == 2){
                 console.log("successful log in")
-                window.location.href = "index.html"
+                window.location.href = "main.html"
             } else if(correctEmail == 0){
-                console.log("not a valid email, sign in!")
+                logInInteractionBox.innerHTML = "<p>Not a valid email, sign in!</p>"
             }
 
         })
         }   
     })
+
 
     
 }
