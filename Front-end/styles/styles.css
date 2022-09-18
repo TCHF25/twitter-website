@@ -212,7 +212,7 @@ a{
     }
 
     .sideImage{
-        background-image: url("frontend/assets/twitter-svgrepo-com.svg");
+        background-image: url("assets/twitter-svgrepo-com.svg");
         background-position: center;
         width: 50vw;
         height: 100vh;
