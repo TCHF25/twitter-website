@@ -11,7 +11,7 @@ $hashedpass = hash("sha256",$unhashedpass);
 
 
 
-$query = $sqli->prepare("SELECT email,password FROM users");
+$query = $sqli->prepare("SELECT * FROM users");
 $query->execute();
 $results = $query->get_result();
 
