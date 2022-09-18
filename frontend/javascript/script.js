@@ -27,7 +27,7 @@ window.onload = () => {
                 signUpPopup.style.display = "none" 
             })
         
-            // Sign up Popun close
+            // Sign up Popun new account
             signupBtn.addEventListener("click", () => {
                 
                 let name = signUpName.value
@@ -36,12 +36,19 @@ window.onload = () => {
                 let pass = signUpPass.value
                 let passC = passConfirm.value
 
-                fetch("http://localhost/twitter-website/backend/apis/APIs/log-in.php")
+                // make sure entered email is unique
+                fetch("http://localhost/twitter-website/backend/apis/APIs/log-in.php",{
+                method:"POST",
+                body: new URLSearchParams({"password":0})
+                })
                 .then(results =>results.json())
                 .then(data =>{
                     let accounts=data
+                    delete accounts["hashedpass"]
+                    let length = Object.keys(accounts).length
                     let valid = 1
-                    for(let i=0; i<accounts.length;i++){
+
+                    for(let i=0; i<length;i++){
                         if(email == accounts[i].email){
                             valid = 0
                             break
@@ -53,19 +60,17 @@ window.onload = () => {
                     } else if(pass != passC){
                         console.log("check password confirmation")
                     } else{
+                        // register account
                         fetch("http://localhost/twitter-website/backend/apis/APIs/Sign-up.php",{
                         method:"POST",
                         body: new URLSearchParams({"full_name":name,"email":email,"phone_number":phone,"password":pass})
-                    })
+                        })
                         .then(response => response.json())
                         .then(data => console.log("success"))
                     }
 
-                    })
-
-
+                })
             })
-                
         }
     })
         
@@ -76,11 +81,10 @@ window.onload = () => {
         let pass = logInPass.value
         let correctEmail = 0
 
-        console.log(pass)
-
         if(email == "" || pass == ""){
             console.log("Please enter all fields")
         } else{
+            // check for email in database + hash entered email
         fetch("http://localhost/twitter-website/backend/apis/APIs/log-in.php",{
             method:"POST",
             body: new URLSearchParams({"password":pass})
@@ -91,13 +95,13 @@ window.onload = () => {
             let hashedpass = accounts.hashedpass
             delete accounts["hashedpass"]
             length = Object.keys(accounts).length
+
             for(let i=0; i<length;i++){
-                console.log(accounts[i].email,accounts[i].password)
                 if(email == accounts[i].email){
                     correctEmail = 1
                     console.log(hashedpass,accounts[i].password)
 
-                    if(hashedpass.contains(accounts[i].password)){
+                    if(hashedpass == accounts[i].password){
                         correctEmail = 2
                     }
                     break
@@ -112,7 +116,7 @@ window.onload = () => {
                 console.log("not a valid email, sign in!")
             }
 
-            })
+        })
         }   
     })
 
