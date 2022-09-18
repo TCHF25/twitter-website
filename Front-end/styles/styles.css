@@ -121,6 +121,13 @@ a{
     width: 9vh;
 }
 
+.interaction{
+    height: 3vw;
+    padding: 5px;
+    color: crimson;
+    font-size: 2vw;
+}
+
 .signUpPopup{
     background-color: rgba(0,0,0,70%);
     height:150%;

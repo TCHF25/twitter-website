@@ -7,7 +7,7 @@ window.onload = () => {
     const logInBtn = document.getElementById("logInBtn")
     const logInEmail = document.getElementById("logInEmail")
     const logInPass = document.getElementById("logInPass")
-
+    const logInInteractionBox = document.getElementById("interactionBox")
     const signUpName = document.getElementById("signUpName")
     const signUpEmail = document.getElementById("signUpEmail")
     const signUpPhone = document.getElementById("signUpPhone")
@@ -84,7 +84,7 @@ window.onload = () => {
         let correctEmail = 0
 
         if(email == "" || pass == ""){
-            console.log("Please enter all fields")
+            logInInteractionBox.innerHTML = "<p>Please enter all fields</p>"
         } else{
             // check for email in database + hash entered email
         fetch("http://localhost/twitter-website/backend/log-in.php",{
@@ -121,12 +121,12 @@ window.onload = () => {
             
 
             if(correctEmail == 1){
-                console.log("wrong password")
+                interactionBox.innerHTML = "<p>Wrong Password</p>"
             } else if(correctEmail == 2){
                 console.log("successful log in")
                 window.location.href = "index.html"
             } else if(correctEmail == 0){
-                console.log("not a valid email, sign in!")
+                interactionBox.innerHTML = "not a valid email, sign in!"
             }
 
         })
