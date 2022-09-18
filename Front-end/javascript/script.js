@@ -70,7 +70,7 @@ window.onload = () => {
                             .then(response => response.json())
                             .then(data => console.log("Success"))
 
-                            window.location.href = "index.html"
+                            window.location.href = "main.html"
                         }
                     }
                 })
@@ -126,7 +126,7 @@ window.onload = () => {
                 logInInteractionBox.innerHTML = "<p>Wrong Password</p>"
             } else if(correctEmail == 2){
                 console.log("successful log in")
-                window.location.href = "index.html"
+                window.location.href = "main.html"
             } else if(correctEmail == 0){
                 logInInteractionBox.innerHTML = "<p>Not a valid email, sign in!</p>"
             }
