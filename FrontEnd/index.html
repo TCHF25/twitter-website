@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
     <link rel="images" href="images/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <nav class="wrapper">
     <!--left margin-->
     <div class="sidebar">
         <!--logo and search bar-->
         <div class="logo-search-bar">
-            <div class="twitter-logo">
-                <img src="images/logo.png" alt="logo">
+            <div class="twitter-logo" >
+                <a href="index.html"> <img src="images/logo.png" alt="logo"> </a>
             </div>
             <div class="search-bar">
                 <div class="search-item">
@@ -30,16 +30,20 @@
                 </div>
             </div>
         </div>
-        <div class="home-profile">
-            <div class="home">
-                <img src="images/home.png" alt="home">
-                <button class="side-btn">Home</button>
-            </div>
-            <div class="profile">
-                <img src="images/profile.png" alt="profile">
-                <button class="side-btn">Profile</button>
-            </div>
-        </div>
+        <ul class="home-profile">
+            <li class="home">
+                <a class="home" href="index.html">
+                <img src="images/home.png" alt="home">  <!--Change to clickable vector-->
+                <div class="side-btn" href="#home">Home</div>
+                </a>
+            </li>
+            <li class="profile">
+                <a  class="profile" href="profile.html">
+                <img src="images/profile.png" alt="profile">  <!--Change to clickable vector-->
+                <div class="side-btn">Profile</div>
+                </a>
+            </li>
+        </ul>
         
 
         <!--who to follow section-->
@@ -63,7 +67,7 @@
             <h6>Terms of Service Privacy Policy Cookie Policy<br>
                 Ads info More © 2022 Twitter, Inc.</h6>
         </footer>
-    </div>
+    </nav>
 
 
 
