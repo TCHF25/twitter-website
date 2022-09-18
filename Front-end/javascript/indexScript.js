@@ -7,6 +7,12 @@ window.onload = () => {
     })
     .then(response => response.json())
     .then(data => console.log(data))
+    
+    const profileName = document.getElementById("profileName")
+    const profileEmail = document.getElementById("profileEmail")
+
+    profileName.innerHTML = localStorage.getItem("full_name")
+    profileEmail.innerHTML = localStorage.getItem("email")
 
 
     const homeBtn = document.getElementById("homeBtn")
@@ -14,11 +20,9 @@ window.onload = () => {
     const profileBtn = document.getElementById("profileBtn")
     const profilePage = document.getElementById("profile")
     const tweetscontainer = document.getElementById("tweets")
-    const editProfileBtn = document.getElementById("editProfile")
-    const editProfilePopup = document.querySelector(".editProfilePopup")
     const changePhoto = document.getElementById("file")
     const profilePhoto = document.getElementById("pp")
-
+    
     homeBtn.addEventListener("click",() =>{
 
         homePage.style.display = "flex"
