@@ -1,1 +1,1 @@
-Twitter Wbsite Clone made with HTML, CSS, JAvascript, PHP and MYSQL.
+Twitter Wbsite Clone made with HTML, CSS, Javascript, PHP and MYSQL.
